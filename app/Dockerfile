@@ -77,5 +77,5 @@ RUN cd /opt \
   && ln -fs /opt/firefox/firefox /usr/bin/firefox \
   && chmod -R 777 /opt/firefox
 
-#ENV DISPLAY :1
-#CMD Xvfb :1 -screen 0 1024x768x24
+ENV DISPLAY :1
+CMD Xvfb :1 -screen 0 1024x768x24
