@@ -13,7 +13,7 @@ docker ps
 2. プロジェクトのルートに移動し、コンテナを起動
 docker-compose up -d
 3. テストスクリプトを実行
-docker run --rm -e DISPLAY=MACのIP:0 -it ruby /selenium_ruby/app/tests.rb
+docker run --rm -e DISPLAY=MACのIP:0 -it appのイメージ ruby /selenium_ruby/app/tests.rb
 4. キャプチャが撮れている事を確認
 screenshot.png
 ```
