@@ -8,12 +8,12 @@ docker volume create --name=mysql-data
 docker-compose up -d
 5. 動作確認
 ```
-appコンテナのIDを確認
+1. appコンテナのIDを確認
 docker ps
-コンテナにログイン
-docker exec -it appコンテナのID /bin/bash
-テストスクリプトを実行
-ruby /ruby_selenium/app/tests.rb
-キャプチャが撮れている事を確認
+2. プロジェクトのルートに移動し、コンテナを起動
+docker-compose up -d
+3. テストスクリプトを実行
+docker run --rm -e DISPLAY=MACのIP:0 -it ruby /selenium_ruby/app/tests.rb
+4. キャプチャが撮れている事を確認
 screenshot.png
 ```
