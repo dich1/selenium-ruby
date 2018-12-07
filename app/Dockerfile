@@ -28,10 +28,9 @@ RUN eval "$(rbenv init -)"; rbenv install 2.3.3 \
   &&  eval "$(rbenv init -)"; gem install bundler --no-document --force
 
 # selenium
-RUN mkdir -p /selenium_ruby/app
+RUN mkdir /selenium_ruby
 WORKDIR /selenium_ruby
-COPY Gemfile /selenium_ruby/app/Gemfile
-COPY . /selenium_ruby
+COPY . /selenium_ruby/app
 WORKDIR /selenium_ruby/app
 RUN bundle install
 WORKDIR /
