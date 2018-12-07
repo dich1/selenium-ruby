@@ -11,21 +11,26 @@ docker volume create --name=mysql-data
 docker-compose up -d
 ```
 5. 動作確認
-ローカルからのGUI起動確認設定
+初期設定
 ```
-別タブのターミナルを開く
-プロジェクトのルートに移動
-chmod + x local-setup.sh
-./local-setup.sh
+Homebrewを入れる
+brew install socat
+brew tap caskroom/cask
+brew cask install xquartz
+```
+スクリプトGUI確認準備
+```
+別タブのターミナルを開いて下記を実行
+open -a XQuartz
+socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 XQuartzが開き、socatが起動中になっていることを確認
 ```
-テストスクリプトの実行
+スクリプトの実行
 ```
 元のターミナル
-1. appのイメージ名を確認
+appのイメージ名を確認
 docker images
-2. テストスクリプトを実行
+テストスクリプトを実行
 docker run --rm -e DISPLAY=MACのIP:0 -it appのイメージ名 ruby /selenium_ruby/app/tests.rb
-3. ブラウザキャプチャが撮れている事を確認
-screenshot.png
+ブラウザキャプチャが撮れている事を確認(screenshot.png)
 ```
