@@ -1,3 +1,4 @@
+# TODO 使用しているモジュールの定義のみを抽出する
 FROM drecom/centos-base:latest
 
 # rbenv
