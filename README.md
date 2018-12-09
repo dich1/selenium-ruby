@@ -1,12 +1,12 @@
 # selenium-ruby
 ## 環境構築
 1. Docker for macを入れ、Dockerを起動する
-2. ボリュームを作成する
+2. ボリュームを作成する  
 ```
 docker volume create --name=mysql-data
 ```
 3. プロジェクトのルートに移動する
-4. イメージを作成、コンテナを起動する
+4. イメージを作成、コンテナを起動する  
 ```
 docker-compose up -d
 ```
