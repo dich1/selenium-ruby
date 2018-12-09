@@ -79,3 +79,5 @@ RUN cd /opt \
 
 #ENV DISPLAY :1
 #CMD Xvfb :1 -screen 0 1024x768x24
+
+CMD tail -f /dev/null
