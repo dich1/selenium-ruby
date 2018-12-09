@@ -31,6 +31,6 @@ XQuartzが開き、socatが起動中になっていることを確認
 appのイメージ名を確認
 docker images
 テストスクリプトを実行
-docker run --rm -e DISPLAY=MACのIP:0 -it appのイメージ名 ruby /selenium_ruby/app/tests.rb
+docker-compose run --rm -e DISPLAY=MACのIP:0 app ruby /selenium_ruby/app/tests.rb
 ブラウザキャプチャが撮れている事を確認(screenshot.png)
 ```
