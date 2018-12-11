@@ -11,6 +11,7 @@ docker volume create --name=mysql-data
 docker-compose up -d
 ```
 5. 動作確認
+
 初期設定
 ```
 Homebrewを入れる
