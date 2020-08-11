@@ -2,3 +2,4 @@ source 'https://rubygems.org'
 
 gem 'selenium-webdriver', '2.53.4'
 gem 'chromedriver-helper'
+gem 'nokogiri'
