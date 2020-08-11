@@ -16,5 +16,5 @@ docker-compose up -d
 ```
 docker-compose exec app bash
 cd /selenium_ruby/app
-ruby tests.rb > result.txt
+ruby tests.rb '埼玉県' > result.txt
 ```
